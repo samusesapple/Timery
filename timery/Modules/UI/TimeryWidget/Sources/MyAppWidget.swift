@@ -14,11 +14,8 @@ struct MyAppWidget: Widget {
     }
 }
 
-#if DEBUG
-struct MyAppWidget_Previews: PreviewProvider {
-    static var previews: some View {
+@available(iOS 17.0, *)
+#Preview {
         WidgetView(entry: SimpleEntry(date: Date()))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
-    }
 }
-#endif
