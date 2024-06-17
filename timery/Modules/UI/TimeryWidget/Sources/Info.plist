@@ -5,7 +5,7 @@
     <key>CFBundleDisplayName</key>
     <string>My Widget</string>
     <key>CFBundleIdentifier</key>
-    <string>io.tuist.timery.widget</string>
+    <string>io.tuist.TimeryWidget</string>
     <key>CFBundleInfoDictionaryVersion</key>
     <string>6.0</string>
     <key>CFBundlePackageType</key>

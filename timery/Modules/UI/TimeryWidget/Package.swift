@@ -4,14 +4,14 @@
 import PackageDescription
 
 let package = Package(
-    name: "Widget",
+    name: "TimeryWidget",
     platforms: [
         .iOS(.v17)
     ],
     products: [
         .library(
-            name: "Widget",
-            targets: ["Widget"]),
+            name: "TimeryWidget",
+            targets: ["TimeryWidget"]),
     ],
     dependencies: [
         // 위젯에서 사용될 외부 패키지가 있다면 여기에 추가합니다.
@@ -19,12 +19,12 @@ let package = Package(
     ],
     targets: [
         .target(
-            name: "Widget",
+            name: "TimeryWidget",
             dependencies: []
         ),
         .testTarget(
-            name: "WidgetTests",
-            dependencies: ["Widget"]
+            name: "TimeryWidgetTests",
+            dependencies: ["TimeryWidget"]
         )
     ]
 )

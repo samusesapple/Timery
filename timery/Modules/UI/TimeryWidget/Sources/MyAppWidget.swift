@@ -14,9 +14,11 @@ struct MyAppWidget: Widget {
     }
 }
 
+#if DEBUG
 struct MyAppWidget_Previews: PreviewProvider {
     static var previews: some View {
         WidgetView(entry: SimpleEntry(date: Date()))
             .previewContext(WidgetPreviewContext(family: .systemSmall))
     }
 }
+#endif
