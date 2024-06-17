@@ -31,6 +31,7 @@ let project = Project(
         .local(path: .relativeToRoot("Modules/UI/ViewExtension")),
         .local(path: .relativeToRoot("Modules/UI/Home")),
         .local(path: .relativeToRoot("Modules/UI/TestDetail")),
+        .local(path: .relativeToRoot("Modules/UI/Widget")),
         .local(path: .relativeToRoot("Modules/Core/Entity")),
         .local(path: .relativeToRoot("Modules/Core/DatabaseManager")),
     ],
@@ -50,6 +51,7 @@ let project = Project(
                 .package(product: "TestDetail"),
                 .package(product: "DatabaseManager"),
                 .package(product: "Entity"),
+                .package(product: "Widget")
             ],
             coreDataModels: [
                 .coreDataModel(
@@ -68,6 +70,17 @@ let project = Project(
             resources: [],
             dependencies: [.target(name: "Timery")]
         ),
+        .target(
+            name: "Widget",
+            destinations: .iOS,
+            product: .appExtension,
+            bundleId: "io.tuist.TimeryWidget",
+            deploymentTargets: deploymentTarget,
+            infoPlist: .file(path: "Modules/UI/Widget/Sources/Info.plist"),
+            sources: ["Modules/UI/Widget/Sources/**"],
+            resources: [],
+            dependencies: []
+        )
     ]
 )
 

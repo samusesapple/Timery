@@ -18,9 +18,9 @@ let package = Package(
         .package(path: .baseModulePath + "UI/ViewExtension"),
         .package(path: .baseModulePath + "UI/Home"),
         .package(path: .baseModulePath + "UI/TestDetail"),
-        .package(path: .baseModulePath + "Domain/MyDomainModule"),
         .package(path: .baseModulePath + "Core/Entity"),
         .package(path: .baseModulePath + "Core/DatabaseManager"),
+        .package(path: .baseModulePath + "UI/Widget")
     ]
 )
 
