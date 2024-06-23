@@ -13,13 +13,13 @@ let package = Package(
             targets: ["{{ name }}"])
     ],
     dependencies: [
-        .package(path: "../ViewExtension")
+        .package(path: "../UIFusionKit")
     ],
     targets: [
         .target(
             name: "{{ name }}",
             dependencies: [
-                "ViewExtension"
+                "UIFusionKit"
             ]
         ),
         .testTarget(

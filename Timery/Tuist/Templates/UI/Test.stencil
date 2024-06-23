@@ -1,3 +1,10 @@
+//
+//  {{ name }}ViewController.swift
+//  Timery
+//
+//  Created by {{ author }} on {{ currentDate }}
+//
+
 import XCTest
 @testable import {{ name }}
 

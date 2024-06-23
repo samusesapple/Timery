@@ -1,8 +1,8 @@
 # 모듈 생성 명령어 사용 방법: 'make module template=ParentModule name=NewModuleName'
 
-# 기본값 설정(각자 본인의 이름을 AUTHOR에 입력하면 됩니다.
-AUTHOR=Sam
-CURRENT_DATE=$(shell date +%Y-%m-%d)
+# GitHub 사용자 이름을 Git config에서 추출
+AUTHOR=$(shell git config user.name)
+CURRENT_DATE=$(shell date +%x)
 
 # module 명령어
 module:

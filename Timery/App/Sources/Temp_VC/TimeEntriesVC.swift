@@ -6,9 +6,9 @@
 //
 
 import UIKit
-import ViewExtension
+import UIFusionKit
 
-final class TimeEntriesVC: BaseVC {
+final class TimeEntriesVC: UIViewController {
     
     let titleLabel = UILabel().then {
         $0.text = "Time Entries"

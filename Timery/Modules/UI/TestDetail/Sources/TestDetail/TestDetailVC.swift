@@ -1,9 +1,7 @@
 import UIKit
-import SnapKit
-import Then
-import ViewExtension
+import UIFusionKit
 
-public final class TestDetailVC: BaseVC {
+public final class TestDetailVC: UIViewController {
     
     private let reactor: TestDetailReactor
 
@@ -15,6 +13,10 @@ public final class TestDetailVC: BaseVC {
         super.init(nibName: nil, bundle: nil)
     }
     
+    @available(*, unavailable)
+    public required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
     public override func viewDidLoad() {
         super.viewDidLoad()
         

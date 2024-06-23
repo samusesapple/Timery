@@ -15,7 +15,7 @@ let package = Package(
             targets: ["Home"]),
     ],
     dependencies: [
-        .package(path: "../ViewExtension")
+        .package(path: "../UIFusionKit")
     ],
     targets: [
         // Targets are the basic building blocks of a package, defining a module or a test suite.
@@ -23,7 +23,7 @@ let package = Package(
         .target(
             name: "Home",
             dependencies: [
-                "ViewExtension"
+                "UIFusionKit"
             ]
         ),
         .testTarget(

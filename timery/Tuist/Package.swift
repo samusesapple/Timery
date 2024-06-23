@@ -5,17 +5,13 @@ import PackageDescription
     import ProjectDescription
 
     let packageSettings = PackageSettings(
-        productTypes: [
-            "Then": .framework,
-            "SnapKit": .framework,
-        ]
+        productTypes: [:]
     )
 #endif
 
 let package = Package(
     name: "Timery",
     dependencies: [
-        .package(path: .baseModulePath + "UI/ViewExtension"),
         .package(path: .baseModulePath + "UI/Home"),
         .package(path: .baseModulePath + "UI/TestDetail"),
         .package(path: .baseModulePath + "Core/Entity"),
@@ -26,6 +22,6 @@ let package = Package(
 
 extension String {
     static var baseModulePath: Self {
-        return "Timery/Modules/"
+        return "../Modules/"
     }
 }

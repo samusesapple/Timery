@@ -6,9 +6,9 @@
 //
 
 import UIKit
-import ViewExtension
+import UIFusionKit
 
-final class SettingsVC: BaseVC {
+final class SettingsVC: UIViewController {
     
     let titleLabel = UILabel().then {
         $0.text = "Settings"

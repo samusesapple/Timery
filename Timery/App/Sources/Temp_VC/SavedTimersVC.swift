@@ -6,9 +6,9 @@
 //
 
 import UIKit
-import ViewExtension
+import UIFusionKit
 
-final class SavedTimersVC: BaseVC {
+final class SavedTimersVC: UIViewController {
     
     let titleLabel = UILabel().then {
         $0.text = "Saved Timers"

@@ -1,3 +1,10 @@
+//
+//  {{ name }}.swift
+//  Timery
+//
+//  Created by {{ author }} on {{ currentDate }}
+//
+
 import Foundation
 
 class {{ name }} {

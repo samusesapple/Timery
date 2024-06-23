@@ -6,9 +6,9 @@
 //
 
 import UIKit
-import ViewExtension
+import UIFusionKit
 
-final class ReportsVC: BaseVC {
+final class ReportsVC: UIViewController {
     
     let titleLabel = UILabel().then {
         $0.text = "Reports"

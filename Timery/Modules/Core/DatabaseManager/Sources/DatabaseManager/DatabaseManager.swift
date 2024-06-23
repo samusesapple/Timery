@@ -18,23 +18,11 @@ public final class DatabaseManager<E: DatabaseEntity>: DatabaseProtocol {
     var context: NSManagedObjectContext {
         return persistentContainer.viewContext
     }
-    
-    public func saveContext() {
-        let context = persistentContainer.viewContext
-        if context.hasChanges {
-            do {
-                try context.save()
-            } catch {
-                let nserror = error as NSError
-                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
-            }
-        }
-    }
 
     public func create(_ entity: Entity) async throws {
         try await performDatabaseOperation {
             entity.toDB(context: self.context)
-            try self.saveContextIfNeeded()
+            self.saveContext()
         }
     }
 
@@ -60,7 +48,7 @@ public final class DatabaseManager<E: DatabaseEntity>: DatabaseProtocol {
                     }
                 }
 
-                try self.saveContextIfNeeded()
+                self.saveContext()
             }
         }
     }
@@ -69,14 +57,20 @@ public final class DatabaseManager<E: DatabaseEntity>: DatabaseProtocol {
         try await performDatabaseOperation {
             if let dbObject = try self.fetchDatabaseObject(with: entity.id) {
                 self.context.delete(dbObject)
-                try self.saveContextIfNeeded()
+                self.saveContext()
             }
         }
     }
-
-    private func saveContextIfNeeded() throws {
+    
+    private func saveContext() {
+        let context = persistentContainer.viewContext
         if context.hasChanges {
-            try context.save()
+            do {
+                try context.save()
+            } catch {
+                let nserror = error as NSError
+                fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
+            }
         }
     }
 
