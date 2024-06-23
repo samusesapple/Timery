@@ -50,7 +50,7 @@ let project = Project(
                 .package(product: "TestDetail"),
                 .package(product: "DatabaseManager"),
                 .package(product: "Entity"),
-                .package(product: "TimeryWidget")
+                .package(product: "TimeryWidget"),
                 .package(product: "UIFusionKit"),
             ],
             coreDataModels: [
